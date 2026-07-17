@@ -1,0 +1,71 @@
+/* ====================================
+   Fonts Configuration
+   ====================================
+   Arabic: DIN Next LT Arabic
+   English: Poppins
+   ==================================== */
+
+@font-face {
+    font-family: 'DIN Next LT Arabic';
+    src: url('../src/assets/fonts/DINNextLTArabic-Regular-3-ar.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --font-arabic: 'DIN Next LT Arabic', 'Cairo', 'Tajawal', sans-serif;
+    --font-english: 'Poppins', sans-serif;
+    --font-primary: var(--font-arabic);
+    --font-secondary: var(--font-english);
+    
+    --fs-hero: clamp(2.5rem, 5vw, 4rem);
+    --fs-h1: clamp(2rem, 4vw, 3rem);
+    --fs-h2: clamp(1.5rem, 3vw, 2.5rem);
+    --fs-h3: clamp(1.25rem, 2.5vw, 1.75rem);
+    --fs-h4: clamp(1.1rem, 2vw, 1.5rem);
+    --fs-body: clamp(0.95rem, 1.5vw, 1.1rem);
+    --fs-small: clamp(0.85rem, 1.2vw, 0.95rem);
+    --fs-xs: clamp(0.75rem, 1vw, 0.85rem);
+    
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    
+    --lh-tight: 1.2;
+    --lh-normal: 1.5;
+    --lh-relaxed: 1.75;
+    --lh-loose: 2;
+    
+    --ls-tight: -0.025em;
+    --ls-normal: 0;
+    --ls-wide: 0.025em;
+    --ls-wider: 0.05em;
+}
+
+.font-arabic { font-family: var(--font-arabic); }
+.font-english { font-family: var(--font-english); }
+
+[dir="rtl"] { font-family: var(--font-arabic); }
+[dir="ltr"] { font-family: var(--font-english); }
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-tight);
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+h4 { font-size: var(--fs-h4); }
+
+p {
+    font-size: var(--fs-body);
+    line-height: var(--lh-relaxed);
+}
+
+small {
+    font-size: var(--fs-small);
+}

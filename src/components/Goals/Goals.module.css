@@ -1,0 +1,123 @@
+.section {
+  padding: 100px 0;
+  background: var(--bg-primary);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionLabel {
+  display: inline-block;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wider);
+  margin-bottom: 12px;
+}
+
+.sectionTitle {
+  font-size: var(--fs-h2);
+  color: var(--text-primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  position: relative;
+}
+
+.card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 36px 28px;
+  text-align: center;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.card.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-secondary);
+}
+
+.timelineDot {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-gradient-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dotNumber {
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  color: var(--color-white);
+}
+
+.iconWrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: rgba(157, 202, 141, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px auto 20px;
+  color: var(--color-secondary-dark);
+  transition: all 0.3s ease;
+}
+
+.card:hover .iconWrap {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  transform: scale(1.1);
+}
+
+.cardTitle {
+  font-size: var(--fs-h4);
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.cardDesc {
+  font-size: var(--fs-small);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
