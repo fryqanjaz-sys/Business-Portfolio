@@ -112,6 +112,21 @@
   transform: translateY(-3px);
 }
 
+.whatsapp:hover {
+  background: #25D366;
+  color: #fff;
+}
+
+.snapchat:hover {
+  background: #FFFC00;
+  color: #000;
+}
+
+.email:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);

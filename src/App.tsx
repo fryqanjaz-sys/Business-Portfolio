@@ -13,9 +13,9 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <VisionMission />
         <Portfolio />
         <Team />
-        <VisionMission />
         <Goals />
         <Values />
       </main>

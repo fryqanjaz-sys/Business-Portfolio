@@ -14,8 +14,8 @@ export interface TeamMember {
   bio: string;
   image: string;
   social: {
-    linkedin: string;
-    twitter: string;
+    whatsapp: string;
+    snapchat: string;
     email: string;
   };
 }
