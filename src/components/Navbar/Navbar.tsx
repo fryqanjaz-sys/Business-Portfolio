@@ -6,17 +6,17 @@ import styles from './Navbar.module.css';
 const navLinks = {
   ar: [
     { id: 'hero', label: 'الرئيسية' },
+    { id: 'vision-mission', label: 'رؤيتنا ورسالتنا' },
     { id: 'portfolio', label: 'أعمالنا' },
     { id: 'team', label: 'فريق العمل' },
-    { id: 'vision-mission', label: 'رؤيتنا ورسالتنا' },
     { id: 'goals', label: 'أهدافنا' },
     { id: 'values', label: 'قيمنا' },
   ],
   en: [
     { id: 'hero', label: 'Home' },
+    { id: 'vision-mission', label: 'Vision & Mission' },
     { id: 'portfolio', label: 'Portfolio' },
     { id: 'team', label: 'Team' },
-    { id: 'vision-mission', label: 'Vision & Mission' },
     { id: 'goals', label: 'Goals' },
     { id: 'values', label: 'Values' },
   ],

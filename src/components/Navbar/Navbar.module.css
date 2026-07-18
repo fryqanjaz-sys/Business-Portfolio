@@ -25,18 +25,18 @@
 .logo {
   display: flex;
   align-items: center;
-  z-index: 1001;
+  /* z-index: 1001; */
+  transform: scale(3.5);
 }
 
 .logoImg {
   height: 45px;
   width: auto;
   transition: transform 0.3s ease;
-  transform: scale(3.5);
 }
 
 .logo:hover .logoImg {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .navLinks {
@@ -201,6 +201,11 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
