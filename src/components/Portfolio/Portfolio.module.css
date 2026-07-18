@@ -5,52 +5,7 @@
 
 .header {
   text-align: center;
-  margin-bottom: 48px;
-}
-
-.sectionLabel {
-  display: inline-block;
-  font-size: var(--fs-small);
-  font-weight: var(--fw-semibold);
-  color: var(--color-primary);
-  text-transform: uppercase;
-  letter-spacing: var(--ls-wider);
-  margin-bottom: 12px;
-  position: relative;
-}
-
-.sectionLabel::before,
-.sectionLabel::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 30px;
-  height: 2px;
-  background: var(--color-primary);
-  opacity: 0.3;
-}
-
-.sectionLabel::before {
-  right: calc(100% + 12px);
-}
-
-.sectionLabel::after {
-  left: calc(100% + 12px);
-}
-
-[dir="ltr"] .sectionLabel::before {
-  left: calc(100% + 12px);
-  right: auto;
-}
-
-[dir="ltr"] .sectionLabel::after {
-  right: calc(100% + 12px);
-  left: auto;
-}
-
-.sectionTitle {
-  font-size: var(--fs-h2);
-  color: var(--text-primary);
+  margin-bottom: 60px;
 }
 
 .grid {
@@ -176,7 +131,7 @@
   color: var(--text-secondary);
   line-height: 1.7;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  /* -webkit-line-clamp: 30; */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

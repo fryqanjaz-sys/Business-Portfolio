@@ -30,8 +30,8 @@ export default function Values() {
       <div className={styles.bgPattern} />
       <div className="section-container">
         <div className={styles.header} ref={titleRef}>
-          <span className={styles.sectionLabel}>{text.title}</span>
-          <h2 className={styles.sectionTitle}>{text.subtitle}</h2>
+          <span className="section-label">{text.title}</span>
+          <h2 className="section-title" style={{ color: 'var(--text-light)' }}>{text.subtitle}</h2>
         </div>
 
         <div className={styles.grid} ref={gridRef}>

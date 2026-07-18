@@ -96,3 +96,49 @@ input, textarea {
   background: var(--color-primary);
   color: var(--color-white);
 }
+
+.section-label {
+  display: inline-block;
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wider);
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.section-label::before,
+.section-label::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 2px;
+  background: var(--color-primary);
+  opacity: 0.3;
+}
+
+.section-label::before {
+  right: calc(100% + 12px);
+}
+
+.section-label::after {
+  left: calc(100% + 12px);
+}
+
+[dir="ltr"] .section-label::before {
+  left: calc(100% + 12px);
+  right: auto;
+}
+
+[dir="ltr"] .section-label::after {
+  right: calc(100% + 12px);
+  left: auto;
+}
+
+.section-title {
+  font-size: var(--fs-h1);
+  color: var(--text-primary);
+  line-height: 1.3;
+}
