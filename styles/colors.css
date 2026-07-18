@@ -7,11 +7,15 @@
 
 :root {
     /* Primary Colors */
-    --color-primary: #41B8D0;        /* Sky Blue */
-    --color-secondary: #9DCA8D;      /* Light Green */
-    --color-tertiary: #2E519E;       /* Dark Blue */
-    --color-white: #FFFFFF;          /* White */
-    
+    --color-primary: #41B8D0;
+    /* Sky Blue */
+    --color-secondary: #9DCA8D;
+    /* Light Green */
+    --color-tertiary: #2E519E;
+    /* Dark Blue */
+    --color-white: #FFFFFF;
+    /* White */
+
     /* Extended Color Palette */
     --color-primary-light: #6BC8DA;
     --color-primary-dark: #2FA0B8;
@@ -19,7 +23,7 @@
     --color-secondary-dark: #7FB86E;
     --color-tertiary-light: #4A6FB8;
     --color-tertiary-dark: #1E3D7A;
-    
+
     /* Neutral Colors */
     --color-black: #1A1A2E;
     --color-gray-dark: #2D2D44;
@@ -27,7 +31,7 @@
     --color-gray-light: #8888A4;
     --color-gray-lighter: #C4C4D4;
     --color-gray-lightest: #F0F0F5;
-    
+
     /* Background Colors */
     --bg-primary: #FFFFFF;
     --bg-secondary: #F8F9FA;
@@ -36,7 +40,7 @@
     --bg-gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-tertiary) 100%);
     --bg-gradient-secondary: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
     --bg-gradient-dark: linear-gradient(135deg, var(--color-gray-dark) 0%, var(--color-black) 100%);
-    
+
     /* Text Colors */
     --text-primary: #1A1A2E;
     --text-secondary: #4A4A68;
@@ -44,11 +48,11 @@
     --text-light: #FFFFFF;
     --text-link: var(--color-primary);
     --text-link-hover: var(--color-tertiary);
-    
+
     /* Border Colors */
     --border-color: #E8E8EE;
     --border-color-hover: var(--color-primary);
-    
+
     /* Shadow Colors */
     --shadow-sm: 0 2px 8px rgba(26, 26, 46, 0.08);
     --shadow-md: 0 4px 16px rgba(26, 26, 46, 0.12);
@@ -57,15 +61,8 @@
     --shadow-primary: 0 4px 20px rgba(65, 184, 208, 0.3);
     --shadow-secondary: 0 4px 20px rgba(157, 202, 141, 0.3);
     --shadow-tertiary: 0 4px 20px rgba(46, 81, 158, 0.3);
-    
+
     /* Overlay Colors */
     --overlay-dark: rgba(26, 26, 46, 0.8);
     --overlay-primary: rgba(65, 184, 208, 0.9);
-}
-
-/* Dark Mode Support (Optional) */
-@media (prefers-color-scheme: dark) {
-    :root {
-        /* Enable if dark mode is needed */
-    }
 }
