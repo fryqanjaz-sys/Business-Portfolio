@@ -30,11 +30,23 @@
   opacity: 0.3;
 }
 
-.sectionLabel::before { right: calc(100% + 12px); }
-.sectionLabel::after { left: calc(100% + 12px); }
+.sectionLabel::before {
+  right: calc(100% + 12px);
+}
 
-[dir="ltr"] .sectionLabel::before { left: calc(100% + 12px); right: auto; }
-[dir="ltr"] .sectionLabel::after { right: calc(100% + 12px); left: auto; }
+.sectionLabel::after {
+  left: calc(100% + 12px);
+}
+
+[dir="ltr"] .sectionLabel::before {
+  left: calc(100% + 12px);
+  right: auto;
+}
+
+[dir="ltr"] .sectionLabel::after {
+  right: calc(100% + 12px);
+  left: auto;
+}
 
 .sectionTitle {
   font-size: var(--fs-h2);
@@ -84,7 +96,6 @@
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  opacity: 0;
   transform: translateY(30px);
 }
 
