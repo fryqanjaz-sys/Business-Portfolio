@@ -1,0 +1,95 @@
+.section {
+  padding: 100px 0;
+  background: var(--bg-secondary);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.card {
+  background: var(--bg-primary);
+  border-radius: 24px;
+  padding: 48px 40px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateY(30px);
+}
+
+.card.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.iconWrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+  color: var(--color-white);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .iconWrap {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.iconVision {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-tertiary));
+}
+
+.iconMission {
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+  border-radius: 50%;
+}
+
+.cardTitle {
+  font-size: var(--fs-h3);
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.cardDesc {
+  font-size: var(--fs-body);
+  color: var(--text-secondary);
+  line-height: 1.9;
+}
+
+.accentLine {
+  width: 50px;
+  height: 4px;
+  background: var(--bg-gradient-primary);
+  border-radius: 2px;
+  margin: 28px auto 0;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 36px 24px;
+  }
+}

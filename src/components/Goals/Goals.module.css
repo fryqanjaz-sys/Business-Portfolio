@@ -8,21 +8,6 @@
   margin-bottom: 60px;
 }
 
-.sectionLabel {
-  display: inline-block;
-  font-size: var(--fs-small);
-  font-weight: var(--fw-semibold);
-  color: var(--color-primary);
-  text-transform: uppercase;
-  letter-spacing: var(--ls-wider);
-  margin-bottom: 12px;
-}
-
-.sectionTitle {
-  font-size: var(--fs-h2);
-  color: var(--text-primary);
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
