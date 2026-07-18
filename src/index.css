@@ -36,7 +36,8 @@ a {
   transition: color 0.3s ease;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -54,7 +55,8 @@ button {
   background: transparent;
 }
 
-input, textarea {
+input,
+textarea {
   font-family: inherit;
   border: none;
   outline: none;

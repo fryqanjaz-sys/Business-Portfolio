@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
-import logoImg from '../../assets/images/logo1.png';
+import logoImg from '../../assets/images/logo2.svg';
 import styles from './Navbar.module.css';
 
 const navLinks = {

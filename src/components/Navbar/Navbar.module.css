@@ -32,6 +32,7 @@
   height: 45px;
   width: auto;
   transition: transform 0.3s ease;
+  transform: scale(3.5);
 }
 
 .logo:hover .logoImg {

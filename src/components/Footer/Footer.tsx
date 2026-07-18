@@ -1,6 +1,6 @@
 import { useLanguage } from '../../context/LanguageContext';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
-import logoImg from '../../assets/images/logo1.png';
+import logoImg from '../../assets/images/logo6.png';
 import styles from './Footer.module.css';
 
 const footerData = {
