@@ -5,18 +5,18 @@ import styles from './Hero.module.css';
 
 const heroData = {
   ar: {
-    title: 'نُحوّل الأفكار إلى',
+    title: 'نحوّل الأفكار إلى',
     highlight: 'واقع رقمي متميز',
-    description: 'فريق متخصص من المبدعين والمطورين يقدم حلولاً تقنية مبتكرة تتجاوز التوقعات وتدفع أعمالك نحو النجاح.',
+    description: 'فريق إنجاز — مجموعة من المبدعين والمطورين بشغف واحد: بناء تجارب رقمية استثنائية تترك أثراً.',
     cta1: 'استكشف أعمالنا',
-    cta2: 'تواصل معنا',
+    cta2: 'تعرف علينا',
   },
   en: {
     title: 'We Turn Ideas Into',
     highlight: 'Exceptional Digital Reality',
-    description: 'A specialized team of creatives and developers delivering innovative technical solutions that exceed expectations and drive your business toward success.',
+    description: 'Team Injaz — a group of creatives and developers with one passion: building exceptional digital experiences that leave a mark.',
     cta1: 'Explore Our Work',
-    cta2: 'Contact Us',
+    cta2: 'About Us',
   },
 };
 
@@ -49,7 +49,7 @@ export default function Hero() {
         <div className={`${styles.textContent} ${mounted ? styles.mounted : ''}`}>
           <div className={styles.badge}>
             <span className={styles.badgeDot} />
-            {language === 'ar' ? 'حلول تقنية مبتكرة' : 'Innovative Tech Solutions'}
+            {language === 'ar' ? 'فريق إنجاز' : 'Team Injaz'}
           </div>
 
           <h1 className={styles.title}>
@@ -72,7 +72,7 @@ export default function Hero() {
             </button>
             <button
               className={`${styles.btn} ${styles.btnSecondary}`}
-              onClick={() => scrollToSection('values')}
+              onClick={() => scrollToSection('team')}
             >
               {data.cta2}
             </button>
@@ -100,11 +100,11 @@ export default function Hero() {
           <div className={styles.visualContainer}>
             <div className={styles.floatingCard} style={{ animationDelay: '0s' }}>
               <div className={styles.floatingIcon}>💡</div>
-              <span>{language === 'ar' ? 'ابتكار' : 'Innovation'}</span>
+              <span>{language === 'ar' ? 'إبداع' : 'Creativity'}</span>
             </div>
             <div className={styles.floatingCard} style={{ animationDelay: '1.5s' }}>
               <div className={styles.floatingIcon}>⚡</div>
-              <span>{language === 'ar' ? 'أداء' : 'Performance'}</span>
+              <span>{language === 'ar' ? 'شغف' : 'Passion'}</span>
             </div>
             <div className={styles.floatingCard} style={{ animationDelay: '3s' }}>
               <div className={styles.floatingIcon}>🎯</div>
