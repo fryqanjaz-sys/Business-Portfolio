@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import { useScrollReveal, useStaggerReveal } from '../../hooks/useScrollReveal';
 import portfolioData from '../../../data/portfolio';
@@ -5,9 +6,58 @@ import type { PortfolioItem } from '../../types';
 import styles from './Portfolio.module.css';
 
 const sectionText = {
-  ar: { title: 'أعمالنا', subtitle: 'استكشف أحدث المشاريع التي نفتخر بها' },
-  en: { title: 'Our Portfolio', subtitle: 'Explore our latest projects that we are proud of' },
+  ar: { title: 'أعمالنا', subtitle: 'استكشف أحدث المشاريع التي نفتخر بها', prev: '→', next: '←' },
+  en: { title: 'Our Portfolio', subtitle: 'Explore our latest projects that we are proud of', prev: '←', next: '→' },
 };
+
+function ImageCarousel({ images, title }: { images: string[]; title: string }) {
+  const [current, setCurrent] = useState(0);
+  const { language } = useLanguage();
+  const text = sectionText[language];
+  const hasMultiple = images.length > 1;
+
+  const goTo = (index: number) => {
+    setCurrent(index);
+  };
+
+  const goPrev = () => {
+    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const goNext = () => {
+    setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  return (
+    <div className={styles.carousel}>
+      <img
+        src={images[current]}
+        alt={title}
+        className={styles.cardImg}
+        loading="lazy"
+      />
+      {hasMultiple && (
+        <>
+          <button className={`${styles.carouselBtn} ${styles.carouselPrev}`} onClick={goPrev}>
+            {text.prev}
+          </button>
+          <button className={`${styles.carouselBtn} ${styles.carouselNext}`} onClick={goNext}>
+            {text.next}
+          </button>
+          <div className={styles.dots}>
+            {images.map((_, i) => (
+              <button
+                key={i}
+                className={`${styles.dot} ${i === current ? styles.dotActive : ''}`}
+                onClick={() => goTo(i)}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
 
 export default function Portfolio() {
   const { language } = useLanguage();
@@ -27,20 +77,7 @@ export default function Portfolio() {
         <div className={styles.grid} ref={gridRef}>
           {data.map((item) => (
             <div key={item.id} className={`${styles.card} stagger-item`}>
-              <div className={styles.cardImage}>
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className={styles.cardImg}
-                  loading="lazy"
-                />
-                <div className={styles.cardOverlay}>
-                  <button className={styles.viewBtn}>
-                    {language === 'ar' ? 'عرض التفاصيل' : 'View Details'}
-                    <span>{language === 'ar' ? '←' : '→'}</span>
-                  </button>
-                </div>
-              </div>
+              <ImageCarousel images={item.images} title={item.title} />
               <div className={styles.cardBody}>
                 <h3 className={styles.cardTitle}>{item.title}</h3>
                 <p className={styles.cardDesc}>{item.description}</p>
