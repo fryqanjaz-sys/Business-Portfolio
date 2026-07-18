@@ -99,7 +99,7 @@ input, textarea {
 
 .section-label {
   display: inline-block;
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-size: clamp(1.8rem, 1.5vw, 1.2rem);
   font-weight: var(--fw-bold);
   color: var(--color-primary);
   text-transform: uppercase;
@@ -147,7 +147,7 @@ input, textarea {
 }
 
 .section-title {
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-size: clamp(2.2rem, 2vw, 3.8rem);
   font-weight: var(--fw-bold);
   color: var(--text-primary);
   line-height: 1.3;
