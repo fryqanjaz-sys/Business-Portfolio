@@ -1,3 +1,19 @@
+const base = import.meta.env.BASE_URL || '/';
+
+const img = (name) => `${base}team/${name}`;
+
+const images = {
+    ishaq: img('ishaq.jpeg'),
+    osama: img('osama.jpeg'),
+    hassan: img('hassan.jpeg'),
+    ahmad: img('ahmad.png'),
+    mohammed: img('mohammed.jpeg'),
+    issa: img('issa.jpeg'),
+    ibrahim: img('ibrahim.jpeg'),
+    othman: img('othman.jpeg'),
+    idris: img('idris.jpeg'),
+};
+
 const teamData = {
     ar: [
         {
@@ -5,7 +21,7 @@ const teamData = {
             name: "إسحاق موسى هارون",
             role: "مؤسس الفريق",
             bio: "",
-            image: "src/assets/images/team/اسحاق.jpeg",
+            image: images.ishaq,
             social: {
                 whatsapp: "https://wa.me/966555211667",
                 snapchat: "#",
@@ -17,7 +33,7 @@ const teamData = {
             name: "اسامة عبدالوهاب",
             role: "عضو في الفريق وتقني",
             bio: "تقني مبرمج تطبيقات جوال",
-            image: "src/assets/images/team/اسامة.jpeg",
+            image: images.osama,
             social: {
                 whatsapp: "https://wa.me/966530196610",
                 snapchat: "https://snapchat.com/t/ZJ0q4mSk",
@@ -29,7 +45,7 @@ const teamData = {
             name: "حسن إبراهيم",
             role: "عضو في الفريق وسكرتير",
             bio: "",
-            image: "src/assets/images/team/حسن.jpeg",
+            image: images.hassan,
             social: {
                 whatsapp: "https://wa.me/966534542190",
                 snapchat: "https://snapchat.com/t/uxKJdOxn",
@@ -41,7 +57,7 @@ const teamData = {
             name: "احمد محمد",
             role: "عضو في الفريق وتقني",
             bio: "",
-            image: "src/assets/images/team/Ahmad.png",
+            image: images.ahmad,
             social: {
                 whatsapp: "https://wa.me/966550873299",
                 snapchat: "https://snapchat.com/t/i2mSBGCB",
@@ -53,7 +69,7 @@ const teamData = {
             name: "محمد عبدالوهاب",
             role: "عضو في الفريق وتقني",
             bio: "مصمم جرافيك",
-            image: "src/assets/images/team/محمد.jpeg",
+            image: images.mohammed,
             social: {
                 whatsapp: "https://wa.me/966577125554",
                 snapchat: "https://snapchat.com/t/Op3Vd9tN",
@@ -65,7 +81,7 @@ const teamData = {
             name: "عيسى الحاج",
             role: "عضو في الفريق",
             bio: "استشاري",
-            image: "src/assets/images/team/عيسى.jpeg",
+            image: images.issa,
             social: {
                 whatsapp: "https://wa.me/966558073401",
                 snapchat: "https://snapchat.com/t/FozvvABW",
@@ -77,7 +93,7 @@ const teamData = {
             name: "إبراهيم غندو",
             role: "عضو في الفريق",
             bio: "",
-            image: "src/assets/images/team/إبراهيم.jpeg",
+            image: images.ibrahim,
             social: {
                 whatsapp: "https://wa.me/966500629984",
                 snapchat: "https://snapchat.com/t/HWrONvme",
@@ -89,7 +105,7 @@ const teamData = {
             name: "عثمان سيدي",
             role: "عضو في الفريق",
             bio: "دبلماسي علاقات",
-            image: "src/assets/images/team/عثمان.jpeg",
+            image: images.othman,
             social: {
                 whatsapp: "https://wa.me/966566516532",
                 snapchat: "https://snapchat.com/t/Hk9UJtcp",
@@ -101,7 +117,7 @@ const teamData = {
             name: "إدريس إبراهيم",
             role: "عضو في الفريق",
             bio: "",
-            image: "src/assets/images/team/ادرس.jpeg",
+            image: images.idris,
             social: {
                 whatsapp: "https://wa.me/966599173248",
                 snapchat: "#",
@@ -115,7 +131,7 @@ const teamData = {
             name: "Ishaq Musa Haroun",
             role: "Team Founder",
             bio: "",
-            image: "src/assets/images/team/اسحاق.jpeg",
+            image: images.ishaq,
             social: {
                 whatsapp: "https://wa.me/966555211667",
                 snapchat: "#",
@@ -127,7 +143,7 @@ const teamData = {
             name: "Osama Abdulwahab",
             role: "Team Member & Technician",
             bio: "Mobile application developer and technician",
-            image: "src/assets/images/team/اسامة.jpeg",
+            image: images.osama,
             social: {
                 whatsapp: "https://wa.me/966530196610",
                 snapchat: "https://snapchat.com/t/ZJ0q4mSk",
@@ -139,7 +155,7 @@ const teamData = {
             name: "Hassan Ibrahim",
             role: "Team Member & Secretary",
             bio: "",
-            image: "src/assets/images/team/حسن.jpeg",
+            image: images.hassan,
             social: {
                 whatsapp: "https://wa.me/966534542190",
                 snapchat: "https://snapchat.com/t/uxKJdOxn",
@@ -151,7 +167,7 @@ const teamData = {
             name: "Ahmad Mohammed",
             role: "Team Member & Technician",
             bio: "",
-            image: "src/assets/images/team/Ahmad.png",
+            image: images.ahmad,
             social: {
                 whatsapp: "https://wa.me/966550873299",
                 snapchat: "https://snapchat.com/t/i2mSBGCB",
@@ -163,7 +179,7 @@ const teamData = {
             name: "Mohammed Abdulwahab",
             role: "Team Member & Technician",
             bio: "Graphic designer",
-            image: "src/assets/images/team/محمد.jpeg",
+            image: images.mohammed,
             social: {
                 whatsapp: "https://wa.me/966577125554",
                 snapchat: "https://snapchat.com/t/Op3Vd9tN",
@@ -175,7 +191,7 @@ const teamData = {
             name: "Issa Al-Haj",
             role: "Team Member",
             bio: "Consultant",
-            image: "src/assets/images/team/عيسى.jpeg",
+            image: images.issa,
             social: {
                 whatsapp: "https://wa.me/966558073401",
                 snapchat: "https://snapchat.com/t/FozvvABW",
@@ -187,7 +203,7 @@ const teamData = {
             name: "Ibrahim Ghandou",
             role: "Team Member",
             bio: "",
-            image: "src/assets/images/team/إبراهيم.jpeg",
+            image: images.ibrahim,
             social: {
                 whatsapp: "https://wa.me/966500629984",
                 snapchat: "https://snapchat.com/t/HWrONvme",
@@ -199,7 +215,7 @@ const teamData = {
             name: "Othman Sidi",
             role: "Team Member",
             bio: "Diplomatic relations",
-            image: "src/assets/images/team/عثمان.jpeg",
+            image: images.othman,
             social: {
                 whatsapp: "https://wa.me/966566516532",
                 snapchat: "https://snapchat.com/t/Hk9UJtcp",
@@ -211,7 +227,7 @@ const teamData = {
             name: "Idris Ibrahim",
             role: "Team Member",
             bio: "",
-            image: "src/assets/images/team/ادرس.jpeg",
+            image: images.idris,
             social: {
                 whatsapp: "https://wa.me/966599173248",
                 snapchat: "#",
