@@ -1,12 +1,12 @@
 const base = import.meta.env.BASE_URL || '/';
 
-const img = (name) => `${base}team/${name}`;
+const img = (name) => `${base}portfolio/${name}`;
 
 const images = {
-    reception1: img('public/portfolio/1.jpeg'),
-    reception2: img('public/portfolio/3.jpeg'),
-    pilgrims1: img('public/portfolio/Nigerian-Pilgrims1.jpeg'),
-    pilgrims2: img('public/portfolio/Nigerian-Pilgrims2.jpeg.jpeg'),
+    reception1: img('1.jpeg'),
+    reception2: img('2.jpeg'),
+    pilgrims1: img('Nigerian-Pilgrims1.jpeg'),
+    pilgrims2: img('Nigerian-Pilgrims2.jpeg.jpeg'),
 };
 
 const portfolioData = {
