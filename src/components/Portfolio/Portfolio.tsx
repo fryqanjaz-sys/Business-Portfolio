@@ -6,8 +6,8 @@ import type { PortfolioItem } from '../../types';
 import styles from './Portfolio.module.css';
 
 const sectionText = {
-  ar: { title: 'أعمالنا', subtitle: 'استكشف أحدث المشاريع التي نفتخر بها', prev: '→', next: '←' },
-  en: { title: 'Our Portfolio', subtitle: 'Explore our latest projects that we are proud of', prev: '←', next: '→' },
+  ar: { title: 'أعمالنا', subtitle: 'استكشف أحدث المشاريع التي نفتخر بها', prev: '→', next: '←', more: 'اقرأ المزيد', less: 'عرض أقل' },
+  en: { title: 'Our Portfolio', subtitle: 'Explore our latest projects that we are proud of', prev: '←', next: '→', more: 'Read more', less: 'Show less' },
 };
 
 function ImageCarousel({ images, title }: { images: string[]; title: string }) {
@@ -36,20 +36,33 @@ function ImageCarousel({ images, title }: { images: string[]; title: string }) {
         className={styles.cardImg}
         loading="lazy"
       />
+      <div className={styles.carouselOverlay} />
       {hasMultiple && (
         <>
-          <button className={`${styles.carouselBtn} ${styles.carouselPrev}`} onClick={goPrev}>
+          <button
+            type="button"
+            className={`${styles.carouselBtn} ${styles.carouselPrev}`}
+            onClick={goPrev}
+            aria-label="Previous image"
+          >
             {text.prev}
           </button>
-          <button className={`${styles.carouselBtn} ${styles.carouselNext}`} onClick={goNext}>
+          <button
+            type="button"
+            className={`${styles.carouselBtn} ${styles.carouselNext}`}
+            onClick={goNext}
+            aria-label="Next image"
+          >
             {text.next}
           </button>
           <div className={styles.dots}>
             {images.map((_, i) => (
               <button
                 key={i}
+                type="button"
                 className={`${styles.dot} ${i === current ? styles.dotActive : ''}`}
                 onClick={() => goTo(i)}
+                aria-label={`Image ${i + 1}`}
               />
             ))}
           </div>
@@ -76,16 +89,39 @@ export default function Portfolio() {
 
         <div className={styles.grid} ref={gridRef}>
           {data.map((item) => (
-            <div key={item.id} className={`${styles.card} stagger-item`}>
-              <ImageCarousel images={item.images} title={item.title} />
-              <div className={styles.cardBody}>
-                <h3 className={styles.cardTitle}>{item.title}</h3>
-                <p className={styles.cardDesc}>{item.description}</p>
-              </div>
-            </div>
+            <PortfolioCard key={item.id} item={item} text={text} />
           ))}
         </div>
       </div>
     </section>
+  );
+}
+
+function PortfolioCard({
+  item,
+  text,
+}: {
+  item: PortfolioItem;
+  text: { more: string; less: string };
+}) {
+  const [expanded, setExpanded] = useState(false);
+  return (
+    <div className={`${styles.card} stagger-item`}>
+      <ImageCarousel images={item.images} title={item.title} />
+      <div className={styles.cardBody}>
+        {item.category && <span className={styles.category}>{item.category}</span>}
+        <h3 className={styles.cardTitle}>{item.title}</h3>
+        <p className={`${styles.cardDesc} ${expanded ? styles.cardDescExpanded : ''}`}>
+          {item.description}
+        </p>
+        <button
+          type="button"
+          className={styles.readMore}
+          onClick={() => setExpanded((v) => !v)}
+        >
+          {expanded ? text.less : text.more}
+        </button>
+      </div>
+    </div>
   );
 }
