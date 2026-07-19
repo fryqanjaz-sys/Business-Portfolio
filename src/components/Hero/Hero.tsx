@@ -4,16 +4,16 @@ import styles from './Hero.module.css';
 
 const heroData = {
   ar: {
-    title: 'نحوّل الأفكار إلى',
-    highlight: 'واقع رقمي متميز',
-    description: 'فريق إنجاز — مجموعة من المبدعين والمطورين بشغف واحد: بناء تجارب رقمية استثنائية تترك أثراً.',
+    title: 'شعارنا',
+    highlight: 'الانجاز قبل المال',
+    description: 'فريق إنجاز — عقول مبدعة يجمعها شغف واحد.',
     cta1: 'استكشف أعمالنا',
     cta2: 'تعرف علينا',
   },
   en: {
-    title: 'We Turn Ideas Into',
-    highlight: 'Exceptional Digital Reality',
-    description: 'Team Injaz — a group of creatives and developers with one passion: building exceptional digital experiences that leave a mark.',
+    title: 'Our Slogan',
+    highlight: 'Achievement Before Money',
+    description: 'Team Injaz — creative minds united by one passion.',
     cta1: 'Explore Our Work',
     cta2: 'About Us',
   },
@@ -112,7 +112,7 @@ export default function Hero() {
             <div className={styles.visualRing} />
             <div className={styles.visualOrb}>
               <div className={styles.orbGlow} />
-              <span className={styles.orbText}>إنجاز</span>
+              <span className={styles.orbText}>{language === 'ar' ? 'فريق إنجاز' : 'Team Injaz'}</span>
             </div>
             {items.map((item, index) => (
               <div
