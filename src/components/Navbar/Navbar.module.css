@@ -26,13 +26,34 @@
   display: flex;
   align-items: center;
   z-index: 1002;
-  transform: scale(1.35);
+  transform: scale(3.2);
+  padding: 0px 30px;
 }
 
 .logoImg {
-  height: 45px;
+  height: 55px;
   width: auto;
   transition: transform 0.3s ease;
+}
+
+@media (max-width: 900px) {
+  .logo {
+    transform: scale(3.2);
+  }
+
+  .logoImg {
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    transform: scale(2.8);
+  }
+
+  .logoImg {
+    height: 45px;
+  }
 }
 
 .logo:hover .logoImg {
