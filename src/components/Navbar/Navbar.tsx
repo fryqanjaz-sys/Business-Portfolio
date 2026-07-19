@@ -123,7 +123,7 @@ export default function Navbar() {
 
       {mobileOpen && (
         <div
-          className={styles.overlay}
+          className={`${styles.overlay} ${mobileOpen ? styles.visible : ''}`}
           onClick={() => setMobileOpen(false)}
         />
       )}
