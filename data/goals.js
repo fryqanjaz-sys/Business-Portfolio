@@ -2,77 +2,65 @@ const goalsData = {
     ar: [
         {
             id: 1,
-            title: "الابتكار المستمر",
-            description: "السعي دائمًا لتقديم حلول إبداعية ومبتكرة تتجاوز التوقعات",
+            title: 'تنمية المهارات الحياتية',
+            description: 'بناء وتطوير المهارات الحياتية لدى الشباب',
             icon: "assets/icons/innovation.svg"
         },
         {
             id: 2,
-            title: "رضا العملاء",
-            description: "تحقيق أعلى مستوى من رضا العملاء من خلال خدمة استثنائية",
+            title: 'تعزيز الانتماء الأسري',
+            description: 'تحقيق اعتزاز الشباب بأسرته',
             icon: "assets/icons/customer.svg"
         },
         {
             id: 3,
-            title: "النمو والتطور",
-            description: "الاستثمار في مواردنا البشرية وتطوير مهاراتنا باستمرار",
+            title: 'تمكين الشباب مهنيًا',
+            description: 'تأهيل الشباب لسوق العمل',
             icon: "assets/icons/growth.svg"
         },
         {
             id: 4,
-            title: "الجودة العالية",
-            description: "الالتزام بأعلى معايير الجودة في جميع مراحل العمل",
+            title: 'دعم المشاريع الشبابية',
+            description: 'احتضان مشاريع الشباب ودعمهم',
             icon: "assets/icons/quality.svg"
         },
         {
             id: 5,
-            title: "الشراكات الاستراتيجية",
-            description: "بناء علاقات شراكة استراتيجية مع عملائنا وشركائنا",
+            title: 'تطوير القدرات القيادية',
+            description: 'تمكين الشباب بالمهارات القيادية',
             icon: "assets/icons/partnership.svg"
         },
-        {
-            id: 6,
-            title: "الاستدامة",
-            description: "العمل على تحقيق الاستدامة البيئية والاجتماعية في جميع مشاريعنا",
-            icon: "assets/icons/sustainability.svg"
-        }
     ],
     en: [
         {
             id: 1,
-            title: "Continuous Innovation",
-            description: "Always striving to provide creative and innovative solutions that exceed expectations",
+            title: "Developing Life Skills",
+            description: "Building and developing life skills among youth",
             icon: "assets/icons/innovation.svg"
         },
         {
             id: 2,
-            title: "Customer Satisfaction",
-            description: "Achieving the highest level of customer satisfaction through exceptional service",
+            title: "Strengthening Family Belonging",
+            description: "Achieving youth pride in their families",
             icon: "assets/icons/customer.svg"
         },
         {
             id: 3,
-            title: "Growth & Development",
-            description: "Investing in our human resources and continuously developing our skills",
+            title: "Empowering Youth Professionally",
+            description: "Qualifying youth for the job market",
             icon: "assets/icons/growth.svg"
         },
         {
             id: 4,
-            title: "High Quality",
-            description: "Committed to the highest quality standards in all stages of work",
+            title: "Supporting Youth Projects",
+            description: "Incubating and supporting youth projects",
             icon: "assets/icons/quality.svg"
         },
         {
             id: 5,
-            title: "Strategic Partnerships",
-            description: "Building strategic partnership relationships with our clients and partners",
+            title: "Developing Leadership Capabilities",
+            description: "Empowering youth with leadership skills",
             icon: "assets/icons/partnership.svg"
-        },
-        {
-            id: 6,
-            title: "Sustainability",
-            description: "Working to achieve environmental and social sustainability in all our projects",
-            icon: "assets/icons/sustainability.svg"
         }
     ]
 };
