@@ -1,12 +1,12 @@
 const missionData = {
     ar: {
         title: "رسالتنا",
-        description: "نلتزم بتقديم حلول تقنية مبتكرة وبجودة عالية تلبي احتياجات عملائنا وتفوق توقعاتهم، مع الحفاظ على معايير التميز والاحترافية في كل ما نقدمه.",
+        description: 'تنمية قدرات الشباب ومهاراتهم  وتسخيرها لخدمة المجتمع عبر برامج مبتكرة وابداعية وتنافسية.',
         icon: "assets/icons/mission.svg"
     },
     en: {
         title: "Our Mission",
-        description: "We are committed to providing innovative, high-quality technical solutions that meet the needs of our clients and exceed their expectations, while maintaining standards of excellence and professionalism in everything we deliver.",
+        description: "Developing the capabilities and skills of youth and harnessing them to serve the community through innovative, creative, and competitive programs.",
         icon: "assets/icons/mission.svg"
     }
 };
