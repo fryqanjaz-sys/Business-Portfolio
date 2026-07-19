@@ -148,9 +148,7 @@ export default function Navbar() {
             className={styles.langToggle}
             onClick={toggleLanguage}
             aria-label="Toggle language"
-          >
-            {language === 'ar' ? 'EN' : 'ع'}
-          </button>
+          >{language === 'ar' ? 'EN' : 'ع'}</button>
 
           <button
             className={styles.mobileToggle}

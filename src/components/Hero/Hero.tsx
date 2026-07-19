@@ -5,14 +5,14 @@ import styles from './Hero.module.css';
 const heroData = {
   ar: {
     title: 'شعارنا',
-    highlight: 'الانجاز قبل المال',
+    highlight: 'الإنجاز طريق النجاح.',
     description: 'فريق إنجاز — عقول مبدعة يجمعها شغف واحد.',
     cta1: 'استكشف أعمالنا',
     cta2: 'تعرف علينا',
   },
   en: {
     title: 'Our Slogan',
-    highlight: 'Achievement Before Money',
+    highlight: 'Achievement is the path to success.',
     description: 'Team Injaz — creative minds united by one passion.',
     cta1: 'Explore Our Work',
     cta2: 'About Us',
