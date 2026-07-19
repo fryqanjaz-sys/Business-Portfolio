@@ -12,6 +12,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
+  align-items: stretch;
 }
 
 .card {
@@ -21,6 +22,9 @@
   box-shadow: var(--shadow-sm);
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transform: translateY(30px);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
 }
 
 .card.revealed {
@@ -31,34 +35,43 @@
 .card:hover {
   transform: translateY(-10px);
   box-shadow: var(--shadow-xl);
+  border-color: color-mix(in srgb, var(--color-primary) 40%, transparent);
 }
 
 .carousel {
   position: relative;
-  height: 320px;
+  height: 300px;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .cardImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .card:hover .cardImg {
-  transform: scale(1.1);
+  transform: scale(1.08);
+}
+
+.carouselOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26, 26, 46, 0.35) 0%, transparent 45%);
+  pointer-events: none;
 }
 
 .carouselBtn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: none;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   color: var(--text-primary);
   font-size: 16px;
   font-weight: var(--fw-semibold);
@@ -67,9 +80,10 @@
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.3s ease, background 0.3s ease;
+  transition: opacity 0.3s ease, background 0.3s ease, transform 0.3s ease;
   z-index: 2;
   backdrop-filter: blur(4px);
+  box-shadow: 0 4px 12px rgba(26, 26, 46, 0.2);
 }
 
 .card:hover .carouselBtn {
@@ -79,19 +93,20 @@
 .carouselBtn:hover {
   background: var(--color-primary);
   color: var(--color-white);
+  transform: translateY(-50%) scale(1.1);
 }
 
 .carouselPrev {
-  left: 12px;
+  left: 14px;
 }
 
 .carouselNext {
-  right: 12px;
+  right: 14px;
 }
 
 .dots {
   position: absolute;
-  bottom: 12px;
+  bottom: 14px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -104,7 +119,7 @@
   height: 8px;
   border-radius: 50%;
   border: none;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.55);
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 0;
@@ -112,28 +127,84 @@
 
 .dotActive {
   background: var(--color-white);
-  width: 20px;
+  width: 22px;
   border-radius: 4px;
 }
 
 .cardBody {
-  padding: 28px 32px 32px;
+  padding: 26px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.category {
+  align-self: flex-start;
+  display: inline-block;
+  padding: 5px 14px;
+  margin-bottom: 14px;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  border-radius: 50px;
 }
 
 .cardTitle {
   font-size: var(--fs-h3);
   color: var(--text-primary);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  line-height: 1.4;
 }
 
 .cardDesc {
   font-size: var(--fs-body);
   color: var(--text-secondary);
-  line-height: 1.7;
+  line-height: 1.8;
   display: -webkit-box;
-  /* -webkit-line-clamp: 30; */
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.cardDescExpanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.readMore {
+  align-self: flex-start;
+  margin-top: 16px;
+  padding: 8px 0;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.readMore::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.readMore:hover {
+  color: var(--color-tertiary);
+}
+
+.readMore:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+  background: var(--color-tertiary);
 }
 
 @media (max-width: 1024px) {
@@ -158,6 +229,12 @@
   }
 
   .cardBody {
-    padding: 20px 24px 24px;
+    padding: 22px 22px 26px;
+  }
+
+  .carouselBtn {
+    opacity: 1;
+    width: 36px;
+    height: 36px;
   }
 }
