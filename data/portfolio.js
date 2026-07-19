@@ -2,139 +2,41 @@ const portfolioData = {
     ar: [
         {
             id: 1,
-            title: "تطبيق إدارة المشاريع",
-            description: "تطبيق شامل لإدارة المشاريع والمهام مع واجهة سهلة الاستخدام",
+            title: 'استقبال رسمي لمعالي وزير الدولة لشؤون الدفاع بجمهورية نيجيريا',
+            description: 'تشرف "فريق إنجاز" للضيافة والاستقبال بتنظيم مراسم استقبال رسمية لمعالي وزير الدولة لشؤون الدفاع بجمهورية نيجيريا الاتحادية، السيد بيلو محمد ماتاوالي، في حي حراء الثقافي (معرض الوحي) بمكة المكرمة.تضمن البرنامج استقبالًا رسميًا وفق أعلى معايير البروتوكول، مع تقديم الضيافة السعودية الأصيلة، تلاه جولة تعريفية في معرض الوحي للتعريف بقصة نزول الوحي، إضافة إلى إبراز القيمة التاريخية والثقافية لحي حراء. وقد نالت الزيارة استحسان معالي الوزير والوفد المرافق. ويعكس هذا التنظيم كفاءة فريق إنجاز في إدارة الفعاليات الرسمية واستقبال الوفود الدولية، بما يجسد قيم الضيافة السعودية ويواكب مستهدفات رؤية المملكة.',
             images: [
-                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
-                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
-                "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=500&fit=crop"
+                'src/assets/images/portfolio/6f126893-0120-4a74-b8b3-183eaf43e8da.jpeg',
+                'src/assets/images/portfolio/f24350d7-e066-4070-be61-c4909eff62a5.jpeg'
             ],
-            category: "تطوير ويب",
-            link: "#"
         },
         {
             id: 2,
-            title: "متجر إلكتروني",
-            description: "منصة تجارة إلكترونية متكاملة مع نظام دفع آمن وواجهة مستخدم سلسة",
+            title: 'مشروع إدارة وتفويج أمتعة الحجاج النيجيريين – موسم حج 1447هـ',
+            description: 'نفّذ فريق إنجاز مشروعًا متكاملًا لإدارة وتفتيش ووزن أمتعة الحجاج النيجيريين بالتعاون مع مجموعة شركاء الخير، ومكتب شؤون حجاج نيجيريا، والجهات الأمنية بمطار الملك عبدالعزيز الدولي. شمل المشروع فحص الأمتعة في مقار السكن بمكة، والتنسيق اللوجستي لنقلها، وإعادة تدقيقها في المطار، والإشراف على إنهاء إجراءات المغادرة، مما أسهم في تسريع إجراءات السفر، ورفع كفاءة العمليات، وتحقيق أعلى معايير الأمن والسلامة مع مستوى رضا مرتفع من جميع الجهات المشاركة.',
             images: [
-                "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop",
-                "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=500&fit=crop"
+                'src/assets/images/portfolio/627877.jpeg',
+                'src/assets/images/portfolio/627878.jpeg',
             ],
-            category: "تطوير ويب",
-            link: "#"
         },
-        {
-            id: 3,
-            title: "تطبيق هاتف",
-            description: "تطبيق موبايل لنظام iOS و Android بتصميم عصري وتجربة مستخدم مميزة",
-            images: [
-                "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=500&fit=crop",
-                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop"
-            ],
-            category: "تطوير موبايل",
-            link: "#"
-        },
-        {
-            id: 4,
-            title: "لوحة تحكم",
-            description: "لوحة تحكم ذكية مع تحليلات وتقارير متقدمة لمساعدة أصحاب القرار على اتخاذ قرارات أفضل",
-            images: [
-                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
-                "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=500&fit=crop",
-                "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop"
-            ],
-            category: "تصميم UI/UX",
-            link: "#"
-        },
-        {
-            id: 5,
-            title: "موقع تعريفي",
-            description: "موقع تعريفي احترافي لشركة ناشئة بتصميم جذاب وتجربة مستخدم فريدة",
-            images: [
-                "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=500&fit=crop"
-            ],
-            category: "تصميم ويب",
-            link: "#"
-        },
-        {
-            id: 6,
-            title: "نظام CRM",
-            description: "نظام إدارة علاقات العملاء مع ميزات متقدمة لتتبع العملاء وإدارة التواصل",
-            images: [
-                "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=500&fit=crop",
-                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop"
-            ],
-            category: "تطوير ويب",
-            link: "#"
-        }
     ],
     en: [
         {
             id: 1,
-            title: "Project Management App",
-            description: "Comprehensive project and task management application with user-friendly interface",
+            title: "Official Reception for the Minister of State for Defense Affairs of the Federal Republic of Nigeria",
+            description: "\"Team Injaz\" for hospitality and reception had the honor of organizing an official reception ceremony for the Minister of State for Defense Affairs of the Federal Republic of Nigeria, Mr. Bello Muhammad Matawalle, at the Hira Cultural District (Revelation Exhibition) in Makkah Al-Mukarramah. The program included an official reception following the highest protocol standards, with authentic Saudi hospitality, followed by a guided tour of the Revelation Exhibition introducing the story of the revelation, in addition to highlighting the historical and cultural value of the Hira District. The visit was highly praised by the Minister and the accompanying delegation. This organization reflects Team Injaz's efficiency in managing official events and receiving international delegations, embodying the values of Saudi hospitality and aligning with the Kingdom's Vision objectives.",
             images: [
-                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
-                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
-                "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=500&fit=crop"
+                'src/assets/images/portfolio/6f126893-0120-4a74-b8b3-183eaf43e8da.jpeg',
+                'src/assets/images/portfolio/f24350d7-e066-4070-be61-c4909eff62a5.jpeg'
             ],
-            category: "Web Development",
-            link: "#"
         },
         {
             id: 2,
-            title: "E-Commerce Store",
-            description: "Integrated e-commerce platform with secure payment system and seamless user experience",
+            title: "Nigerian Pilgrims' Baggage Management and Coordination Project – Hajj Season 1447 AH",
+            description: "Team Injaz executed a comprehensive project for managing, inspecting, and weighing Nigerian pilgrims' baggage in cooperation with the Good Partners Group, the Office of Nigerian Hajj Affairs, and the security authorities at King Abdulaziz International Airport. The project included baggage inspection at accommodations in Makkah, logistics coordination for transport, re-verification at the airport, and supervision of departure procedures, which contributed to accelerating travel procedures, raising operational efficiency, and achieving the highest security and safety standards with a high satisfaction level from all participating parties.",
             images: [
-                "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop",
-                "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=500&fit=crop"
+                'src/assets/images/portfolio/627877.jpeg',
+                'src/assets/images/portfolio/627878.jpeg',
             ],
-            category: "Web Development",
-            link: "#"
-        },
-        {
-            id: 3,
-            title: "Mobile App",
-            description: "Mobile application for iOS and Android with modern design and exceptional user experience",
-            images: [
-                "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=500&fit=crop",
-                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop"
-            ],
-            category: "Mobile Development",
-            link: "#"
-        },
-        {
-            id: 4,
-            title: "Dashboard",
-            description: "Smart dashboard with advanced analytics and reports to help decision makers make better decisions",
-            images: [
-                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
-                "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=500&fit=crop",
-                "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop"
-            ],
-            category: "UI/UX Design",
-            link: "#"
-        },
-        {
-            id: 5,
-            title: "Landing Page",
-            description: "Professional landing page for startups with attractive design and unique user experience",
-            images: [
-                "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=500&fit=crop"
-            ],
-            category: "Web Design",
-            link: "#"
-        },
-        {
-            id: 6,
-            title: "CRM System",
-            description: "Customer relationship management system with advanced features for tracking clients and managing communication",
-            images: [
-                "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=500&fit=crop",
-                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop"
-            ],
-            category: "Web Development",
-            link: "#"
         }
     ]
 };
