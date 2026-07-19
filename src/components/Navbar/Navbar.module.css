@@ -36,26 +36,6 @@
   transition: transform 0.3s ease;
 }
 
-@media (max-width: 900px) {
-  .logo {
-    transform: scale(3.2);
-  }
-
-  .logoImg {
-    height: 50px;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    transform: scale(2.8);
-  }
-
-  .logoImg {
-    height: 45px;
-  }
-}
-
 .logo:hover .logoImg {
   transform: scale(1.08);
 }
@@ -133,107 +113,26 @@
   transform: scale(1.05);
 }
 
-.burger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  padding: 8px;
-  cursor: pointer;
-}
-
-.burger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--text-primary);
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-.burgerOpen span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.burgerOpen span:nth-child(2) {
-  opacity: 0;
-}
-
-.burgerOpen span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-.overlay {
-  display: none;
-}
-
 @media (max-width: 900px) {
-  .burger {
-    display: flex;
-  }
-
   .navLinks {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 280px;
-    height: 100vh;
-    background: var(--bg-primary);
-    flex-direction: column;
-    align-items: stretch;
-    padding: 100px 30px 40px;
-    gap: 4px;
-    transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+    display: none;
   }
 
-  [dir="ltr"] .navLinks {
-    right: auto;
-    left: -100%;
-    box-shadow: 5px 0 30px rgba(0, 0, 0, 0.1);
+  .logo {
+    transform: scale(2.8);
   }
 
-  .navLinks.open {
-    right: 0;
-  }
-
-  [dir="ltr"] .navLinks.open {
-    left: 0;
-  }
-
-  .navLink {
-    padding: 14px 20px;
-    font-size: var(--fs-body);
-    border-radius: 12px;
-  }
-
-  .navLink:hover,
-  .navLink.active {
-    background: rgba(65, 184, 208, 0.08);
-  }
-
-  .overlay {
-    display: block;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-  }
-
-  .overlay.visible {
-    opacity: 1;
-    visibility: visible;
+  .logoImg {
+    height: 50px;
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+@media (max-width: 480px) {
+  .logo {
+    transform: scale(2.4);
   }
 
-  to {
-    opacity: 1;
+  .logoImg {
+    height: 45px;
   }
 }

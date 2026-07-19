@@ -23,9 +23,8 @@ const navLinks = {
 };
 
 export default function Navbar() {
-  const { language, toggleLanguage, dir } = useLanguage();
+  const { language, toggleLanguage } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const links = navLinks[language];
 
@@ -62,7 +61,6 @@ export default function Navbar() {
   }, [links]);
 
   const handleNavClick = (id: string) => {
-    setMobileOpen(false);
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -83,7 +81,7 @@ export default function Navbar() {
           <img src={logoImg} alt="Injaz" className={styles.logoImg} />
         </a>
 
-        <ul className={`${styles.navLinks} ${mobileOpen ? styles.open : ''}`}>
+        <ul className={styles.navLinks}>
           {links.map((link) => (
             <li key={link.id}>
               <a
@@ -108,25 +106,8 @@ export default function Navbar() {
           >
             {language === 'ar' ? 'EN' : 'ع'}
           </button>
-
-          <button
-            className={`${styles.burger} ${mobileOpen ? styles.burgerOpen : ''}`}
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle menu"
-          >
-            <span />
-            <span />
-            <span />
-          </button>
         </div>
       </div>
-
-      {mobileOpen && (
-        <div
-          className={`${styles.overlay} ${mobileOpen ? styles.visible : ''}`}
-          onClick={() => setMobileOpen(false)}
-        />
-      )}
     </nav>
   );
 }
