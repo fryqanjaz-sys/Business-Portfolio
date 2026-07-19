@@ -5,8 +5,8 @@ const portfolioData = {
             title: 'استقبال رسمي لمعالي وزير الدولة لشؤون الدفاع بجمهورية نيجيريا',
             description: 'تشرف "فريق إنجاز" للضيافة والاستقبال بتنظيم مراسم استقبال رسمية لمعالي وزير الدولة لشؤون الدفاع بجمهورية نيجيريا الاتحادية، السيد بيلو محمد ماتاوالي، في حي حراء الثقافي (معرض الوحي) بمكة المكرمة.تضمن البرنامج استقبالًا رسميًا وفق أعلى معايير البروتوكول، مع تقديم الضيافة السعودية الأصيلة، تلاه جولة تعريفية في معرض الوحي للتعريف بقصة نزول الوحي، إضافة إلى إبراز القيمة التاريخية والثقافية لحي حراء. وقد نالت الزيارة استحسان معالي الوزير والوفد المرافق. ويعكس هذا التنظيم كفاءة فريق إنجاز في إدارة الفعاليات الرسمية واستقبال الوفود الدولية، بما يجسد قيم الضيافة السعودية ويواكب مستهدفات رؤية المملكة.',
             images: [
-                'src/assets/images/portfolio/6f126893-0120-4a74-b8b3-183eaf43e8da.jpeg',
-                'src/assets/images/portfolio/f24350d7-e066-4070-be61-c4909eff62a5.jpeg'
+                'public/portfolio/1.jpeg',
+                'public/portfolio/2.jpeg',
             ],
         },
         {
@@ -34,8 +34,8 @@ const portfolioData = {
             title: "Nigerian Pilgrims' Baggage Management and Coordination Project – Hajj Season 1447 AH",
             description: "Team Injaz executed a comprehensive project for managing, inspecting, and weighing Nigerian pilgrims' baggage in cooperation with the Good Partners Group, the Office of Nigerian Hajj Affairs, and the security authorities at King Abdulaziz International Airport. The project included baggage inspection at accommodations in Makkah, logistics coordination for transport, re-verification at the airport, and supervision of departure procedures, which contributed to accelerating travel procedures, raising operational efficiency, and achieving the highest security and safety standards with a high satisfaction level from all participating parties.",
             images: [
-                'src/assets/images/portfolio/627877.jpeg',
-                'src/assets/images/portfolio/627878.jpeg',
+                'public/portfolio/Nigerian-Pilgrims1.jpeg',
+                'public/portfolio/Nigerian-Pilgrims2.jpeg',
             ],
         }
     ]
