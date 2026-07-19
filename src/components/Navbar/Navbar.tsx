@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import logoImg from '../../assets/images/logo2.svg';
 import styles from './Navbar.module.css';
@@ -22,11 +22,54 @@ const navLinks = {
   ],
 };
 
+const menuIcons: Record<string, React.ReactNode> = {
+  hero: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+      <polyline points="9 22 9 12 15 12 15 22" />
+    </svg>
+  ),
+  'vision-mission': (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+      <circle cx="12" cy="12" r="3" />
+    </svg>
+  ),
+  portfolio: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="3" width="7" height="7" />
+      <rect x="14" y="3" width="7" height="7" />
+      <rect x="14" y="14" width="7" height="7" />
+      <rect x="3" y="14" width="7" height="7" />
+    </svg>
+  ),
+  team: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+    </svg>
+  ),
+  goals: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="10" />
+      <circle cx="12" cy="12" r="6" />
+      <circle cx="12" cy="12" r="2" />
+    </svg>
+  ),
+  values: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+    </svg>
+  ),
+};
+
 export default function Navbar() {
-  const { language, toggleLanguage, dir } = useLanguage();
+  const { language, toggleLanguage } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
+  const [menuOpen, setMenuOpen] = useState(false);
   const links = navLinks[language];
 
   useEffect(() => {
@@ -62,7 +105,7 @@ export default function Navbar() {
   }, [links]);
 
   const handleNavClick = (id: string) => {
-    setMobileOpen(false);
+    setMenuOpen(false);
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -83,7 +126,7 @@ export default function Navbar() {
           <img src={logoImg} alt="Injaz" className={styles.logoImg} />
         </a>
 
-        <ul className={`${styles.navLinks} ${mobileOpen ? styles.open : ''}`}>
+        <ul className={styles.navLinks}>
           {links.map((link) => (
             <li key={link.id}>
               <a
@@ -105,28 +148,49 @@ export default function Navbar() {
             className={styles.langToggle}
             onClick={toggleLanguage}
             aria-label="Toggle language"
-          >
-            {language === 'ar' ? 'EN' : 'ع'}
-          </button>
+          >{language === 'ar' ? 'EN' : 'ع'}</button>
 
           <button
-            className={`${styles.burger} ${mobileOpen ? styles.burgerOpen : ''}`}
-            onClick={() => setMobileOpen(!mobileOpen)}
+            className={styles.mobileToggle}
+            onClick={() => setMenuOpen((v) => !v)}
             aria-label="Toggle menu"
           >
-            <span />
-            <span />
-            <span />
+            {menuOpen ? (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 6L6 18" />
+                <path d="M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M4 8h16" />
+                <path d="M4 16h10" />
+              </svg>
+            )}
           </button>
+
+          {menuOpen && (
+            <div
+              className={`${styles.dropdownOverlay}`}
+              onClick={() => setMenuOpen(false)}
+            />
+          )}
+
+          <div className={`${styles.dropdown} ${menuOpen ? styles.open : ''}`}>
+            {links.map((link) => (
+              <button
+                key={link.id}
+                className={`${styles.dropdownLink} ${activeSection === link.id ? styles.active : ''}`}
+                onClick={() => handleNavClick(link.id)}
+              >
+                <span className={styles.dropdownIcon}>
+                  {menuIcons[link.id]}
+                </span>
+                <span className={styles.dropdownLabel}>{link.label}</span>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
-
-      {mobileOpen && (
-        <div
-          className={`${styles.overlay} ${mobileOpen ? styles.visible : ''}`}
-          onClick={() => setMobileOpen(false)}
-        />
-      )}
     </nav>
   );
 }
