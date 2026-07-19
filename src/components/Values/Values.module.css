@@ -9,36 +9,43 @@
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 20% 50%, rgba(65, 184, 208, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(157, 202, 141, 0.08) 0%, transparent 50%);
+    radial-gradient(circle at 15% 30%, rgba(65, 184, 208, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 85% 70%, rgba(157, 202, 141, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(46, 81, 158, 0.06) 0%, transparent 40%);
   pointer-events: none;
 }
 
 .header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 64px;
 }
 
 .sectionTitle {
   color: var(--text-light);
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  line-height: 1.5;
+  max-width: 500px;
+  margin: 0 auto;
+  opacity: 0.85;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  gap: 24px;
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
-  padding: 36px 28px;
+  padding: 40px 28px 36px;
   text-align: center;
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transform: translateY(30px);
+  cursor: default;
 }
 
 .card.revealed {
@@ -48,40 +55,63 @@
 
 .card:hover {
   transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: var(--color-primary);
-  box-shadow: 0 0 40px rgba(65, 184, 208, 0.15);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(65, 184, 208, 0.4);
+  box-shadow: 0 0 48px rgba(65, 184, 208, 0.12);
+}
+
+.cardNumber {
+  position: absolute;
+  top: 18px;
+  inset-inline-start: 20px;
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.04);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  transition: color 0.4s ease;
+}
+
+.card:hover .cardNumber {
+  color: rgba(65, 184, 208, 0.1);
 }
 
 .iconWrap {
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
-  background: rgba(65, 184, 208, 0.12);
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  background: rgba(65, 184, 208, 0.1);
+  border: 1px solid rgba(65, 184, 208, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 20px;
+  margin: 0 auto 22px;
   color: var(--color-primary);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .card:hover .iconWrap {
-  background: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-tertiary));
   color: var(--color-white);
-  transform: scale(1.1);
+  border-color: transparent;
+  transform: scale(1.1) rotate(-3deg);
+  box-shadow: 0 8px 28px rgba(65, 184, 208, 0.35);
 }
 
 .cardTitle {
-  font-size: var(--fs-h4);
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
   color: var(--text-light);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  line-height: 1.4;
 }
 
 .cardDesc {
   font-size: var(--fs-small);
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.55);
   line-height: 1.7;
+  max-width: 280px;
+  margin: 0 auto;
 }
 
 .hoverLine {
@@ -90,29 +120,49 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: var(--bg-gradient-primary);
+  background: linear-gradient(90deg, var(--color-primary), var(--color-tertiary));
   transform: scaleX(0);
-  transition: transform 0.4s ease;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: left;
+}
+
+[dir="ltr"] .hoverLine {
+  transform-origin: right;
 }
 
 .card:hover .hoverLine {
   transform: scaleX(1);
+  transform-origin: left;
+}
+
+[dir="ltr"] .card:hover .hoverLine {
+  transform-origin: right;
 }
 
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
 
 @media (max-width: 640px) {
   .section {
-    padding: 60px 0;
+    padding: 70px 0;
+  }
+
+  .header {
+    margin-bottom: 48px;
   }
 
   .grid {
     grid-template-columns: 1fr;
-    max-width: 400px;
+    max-width: 420px;
     margin: 0 auto;
+    gap: 16px;
+  }
+
+  .card {
+    padding: 32px 24px 28px;
   }
 }
