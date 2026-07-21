@@ -31,19 +31,19 @@ const teamData = {
         {
             id: 2,
             name: "اسامة عبدالوهاب",
-            role: "عضو في الفريق وتقني",
+            role: "عضو فريق وتقني",
             bio: "تقني مبرمج تطبيقات جوال",
             image: images.osama,
             social: {
                 whatsapp: "https://wa.me/966530196610",
-                snapchat: "https://snapchat.com/t/ZJ0q4mSk",
+                snapchat: "#",
                 email: "osmaa10321@gmail.com"
             }
         },
         {
             id: 3,
             name: "حسن إبراهيم",
-            role: "عضو في الفريق وسكرتير",
+            role: "عضو فريق وسكرتير",
             bio: "",
             image: images.hassan,
             social: {
@@ -55,7 +55,7 @@ const teamData = {
         {
             id: 4,
             name: "احمد محمد",
-            role: "عضو في الفريق وتقني",
+            role: "عضو فريق وتقني",
             bio: "",
             image: images.ahmad,
             social: {
@@ -67,7 +67,7 @@ const teamData = {
         {
             id: 5,
             name: "محمد عبدالوهاب",
-            role: "عضو في الفريق وتقني",
+            role: "عضو فريق وتقني",
             bio: "مصمم جرافيك",
             image: images.mohammed,
             social: {
@@ -79,7 +79,7 @@ const teamData = {
         {
             id: 6,
             name: "عيسى الحاج",
-            role: "عضو في الفريق",
+            role: "عضو فريق",
             bio: "استشاري",
             image: images.issa,
             social: {
@@ -91,7 +91,7 @@ const teamData = {
         {
             id: 7,
             name: "إبراهيم غندو",
-            role: "عضو في الفريق",
+            role: "عضو فريق",
             bio: "",
             image: images.ibrahim,
             social: {
@@ -103,8 +103,8 @@ const teamData = {
         {
             id: 8,
             name: "عثمان سيدي",
-            role: "عضو في الفريق",
-            bio: "دبلماسي علاقات",
+            role: "عضو فريق",
+            bio: "",
             image: images.othman,
             social: {
                 whatsapp: "https://wa.me/966566516532",
@@ -115,7 +115,7 @@ const teamData = {
         {
             id: 8,
             name: "إدريس إبراهيم",
-            role: "عضو في الفريق",
+            role: "عضو فريق",
             bio: "",
             image: images.idris,
             social: {
@@ -214,7 +214,7 @@ const teamData = {
             id: 8,
             name: "Othman Sidi",
             role: "Team Member",
-            bio: "Diplomatic relations",
+            bio: "",
             image: images.othman,
             social: {
                 whatsapp: "https://wa.me/966566516532",
