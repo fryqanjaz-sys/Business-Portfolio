@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Portfolio from './components/Portfolio';
+import Services from './components/Services';
 import Team from './components/Team';
 import VisionMission from './components/VisionMission';
 import Goals from './components/Goals';
@@ -14,8 +15,9 @@ function App() {
       <main>
         <Hero />
         <VisionMission />
+        <Services />
         <Portfolio />
-        <Team />
+        {/* <Team /> */}
         <Goals />
         <Values />
       </main>

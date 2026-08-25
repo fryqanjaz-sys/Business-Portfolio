@@ -21,18 +21,41 @@ const heroData = {
 
 const values = {
   ar: [
-    { icon: '💡', label: 'إبداع' },
-    { icon: '⚡', label: 'شغف' },
-    { icon: '🎯', label: 'دقة' },
-    { icon: '🚀', label: 'إنجاز' },
+    { label: 'إبداع' },
+    { label: 'شغف' },
+    { label: 'دقة' },
+    { label: 'إنجاز' },
   ],
   en: [
-    { icon: '💡', label: 'Creativity' },
-    { icon: '⚡', label: 'Passion' },
-    { icon: '🎯', label: 'Precision' },
-    { icon: '🚀', label: 'Injaz' },
+    { label: 'Creativity' },
+    { label: 'Passion' },
+    { label: 'Precision' },
+    { label: 'Injaz' },
   ],
 };
+
+const valueIcons = [
+  <svg key="creativity" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">
+    <path d="M9 18h6" />
+    <path d="M10 22h4" />
+    <path d="M8.5 14.5A6 6 0 1 1 15.5 15c-.9.7-1.5 1.7-1.5 3h-4c0-1.3-.6-2.3-1.5-3.5Z" />
+    <path d="M12 2v1M4.93 4.93l.7.7M2 12h1M19.07 4.93l-.7.7M21 12h-1" />
+  </svg>,
+  <svg key="passion" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M13.5 2.5c.4 3.1-1.8 4.6-3.3 6.5-1.1 1.4-1.2 3.1-.2 4.5.3-2 1.8-3.2 3.2-4.2-.1 2.1 2.3 3 2.3 5.6 0 1.3-.5 2.5-1.4 3.4 3.1-.8 5.4-3.6 5.4-6.9 0-3.5-2.4-6.9-6-8.9Z" />
+    <path d="M10.5 20.5a5.1 5.1 0 0 1-3.2-4.7c0-1.7.8-3.2 2.2-4.4" />
+  </svg>,
+  <svg key="precision" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="8.5" />
+    <circle cx="12" cy="12" r="3" />
+    <path d="M12 1v2.5M12 20.5V23M1 12h2.5M20.5 12H23" />
+  </svg>,
+  <svg key="achievement" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M5 10.5 12 2l7 8.5" />
+    <path d="M5 10.5h14L17 22H7L5 10.5Z" />
+    <path d="M9 14.5h6M10 18h4" />
+  </svg>,
+];
 
 export default function Hero() {
   const { language } = useLanguage();
@@ -120,7 +143,7 @@ export default function Hero() {
                 className={styles.chip}
                 style={{ ['--i' as string]: index }}
               >
-                <span className={styles.chipIcon}>{item.icon}</span>
+                <span className={styles.chipIcon}>{valueIcons[index]}</span>
                 <span className={styles.chipLabel}>{item.label}</span>
               </div>
             ))}

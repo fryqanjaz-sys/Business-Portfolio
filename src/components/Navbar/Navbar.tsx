@@ -7,6 +7,7 @@ const navLinks = {
   ar: [
     { id: 'hero', label: 'الرئيسية' },
     { id: 'vision-mission', label: 'رؤيتنا ورسالتنا' },
+    { id: 'services', label: 'خدماتنا' },
     { id: 'portfolio', label: 'أعمالنا' },
     { id: 'team', label: 'فريق العمل' },
     { id: 'goals', label: 'أهدافنا' },
@@ -15,6 +16,7 @@ const navLinks = {
   en: [
     { id: 'hero', label: 'Home' },
     { id: 'vision-mission', label: 'Vision & Mission' },
+    { id: 'services', label: 'Services' },
     { id: 'portfolio', label: 'Portfolio' },
     { id: 'team', label: 'Team' },
     { id: 'goals', label: 'Goals' },
@@ -33,6 +35,12 @@ const menuIcons: Record<string, React.ReactNode> = {
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
       <circle cx="12" cy="12" r="3" />
+    </svg>
+  ),
+  services: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M4 5h16v14H4z" />
+      <path d="M4 9h16M9 5v4M15 5v4M8 13h2M14 13h2M8 16h2M14 16h2" />
     </svg>
   ),
   portfolio: (

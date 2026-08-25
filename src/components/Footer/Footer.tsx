@@ -59,7 +59,7 @@ export default function Footer() {
             <img src={logoImg} alt="Injaz" className={styles.logo} />
             <p className={styles.brandDesc}>{data.description}</p>
             <div className={styles.socials}>
-              <a href="#" className={styles.socialLink} aria-label="Twitter">
+              {/* <a href="#" className={styles.socialLink} aria-label="Twitter">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
               </a>
               <a href="#" className={styles.socialLink} aria-label="LinkedIn">
@@ -67,7 +67,7 @@ export default function Footer() {
               </a>
               <a href="#" className={styles.socialLink} aria-label="Instagram">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="5" /><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" /></svg>
-              </a>
+              </a> */}
             </div>
           </div>
 

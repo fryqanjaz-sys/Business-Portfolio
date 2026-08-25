@@ -40,14 +40,18 @@
 
 .carousel {
   position: relative;
-  height: 300px;
+  height: auto;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
   flex-shrink: 0;
 }
 
 .cardImg {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
   transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -225,7 +229,7 @@
   }
 
   .carousel {
-    height: 240px;
+    aspect-ratio: 4 / 3;
   }
 
   .cardBody {
