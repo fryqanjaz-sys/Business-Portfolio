@@ -80,10 +80,10 @@ export default function Hero() {
       <div className="section-container">
         <div className={styles.inner}>
           <div className={styles.textContent}>
-            <div className={`${styles.badge} ${styles.reveal}`} style={{ transitionDelay: '0.1s' }}>
+            {/* <div className={`${styles.badge} ${styles.reveal}`} style={{ transitionDelay: '0.1s' }}>
               <span className={styles.badgeDot} />
               {language === 'ar' ? 'فريق إنجاز' : 'Team Injaz'}
-            </div>
+            </div> */}
 
             <h1 className={`${styles.title} ${styles.reveal}`} style={{ transitionDelay: '0.2s' }}>
               {data.title}
@@ -113,7 +113,7 @@ export default function Hero() {
               </button>
             </div>
 
-            <div className={`${styles.stats} ${styles.reveal}`} style={{ transitionDelay: '0.65s' }}>
+            {/* <div className={`${styles.stats} ${styles.reveal}`} style={{ transitionDelay: '0.65s' }}>
               <div className={styles.statItem}>
                 <span className={styles.statNumber}>+50</span>
                 <span className={styles.statLabel}>{language === 'ar' ? 'مشروع' : 'Projects'}</span>
@@ -128,7 +128,7 @@ export default function Hero() {
                 <span className={styles.statNumber}>+10</span>
                 <span className={styles.statLabel}>{language === 'ar' ? 'سنوات خبرة' : 'Years'}</span>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className={`${styles.visual} ${styles.reveal}`} style={{ transitionDelay: '0.4s' }}>

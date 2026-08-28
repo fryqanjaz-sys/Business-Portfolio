@@ -2,64 +2,64 @@ const valuesData = {
     ar: [
         {
             id: 1,
-            title: 'الخصوصية',
-            description: 'نلتزم بأعلى معايير النزاهة والشفافية في جميع تعاملاتنا وعلاقاتنا.',
+            title: 'الضيافة الأصيلة',
+            description: 'نحرص على تقديم ضيافة سعودية راقية تعكس العراقة والكرم، وتترك أثراً لا يُنسى في كل ضيف.',
             icon: "assets/icons/integrity.svg"
         },
         {
             id: 2,
-            title: 'روح الفريق',
-            description: 'نؤمن بقوة العمل الجماعي والتعاون لتحقيق الأهداف المشتركة وتقديم أفضل النتائج.',
-            icon: "assets/icons/collaboration.svg"
-        },
-        {
-            id: 3,
-            title: 'الاحترافية',
-            description: 'نسعى دائماً للتميز في جميع المنتجات والخدمات التي نقدمها لعملائنا.',
+            title: 'الدقة والاتقان',
+            description: 'نُعنى بأدق التفاصيل في كل فعالية، من التخطيط إلى التنفيذ، لضمان تجربة متكاملة وخالية من الأخطاء.',
             icon: "assets/icons/excellence.svg"
         },
         {
+            id: 3,
+            title: 'الإبداع والتميز',
+            description: 'نسعى دائماً لتقديم أفكار مبتكرة وأجواء مميزة تجعل كل مناسبة فريدة من نوعها.',
+            icon: "assets/icons/collaboration.svg"
+        },
+        {
             id: 4,
-            title: 'الاحترام والمسؤولية',
-            description: 'نتحمل المسؤولية تجاه عملائنا ومجتمعنا وبيئتنا بكل وعي واحترام.',
+            title: 'الموثوقية والأمانة',
+            description: 'نلتزم بوعودنا ومواعيدنا، ونحافظ على ثقة عملائنا بالشفافية والاحترافية في كل مرحلة.',
             icon: "assets/icons/responsibility.svg"
         },
         {
             id: 5,
-            title: 'التواصل الفعال',
-            description: 'نتواصل بفعالية مع عملائنا وشركائنا لتحقيق رضاهم وبناء علاقات قوية.',
+            title: 'العمل الجماعي',
+            description: 'نؤمن بأن النجاح ثمرة تعاون حقيقي بين أفراد الفريق والشركاء لتحقيق أفضل النتائج.',
             icon: "assets/icons/flexibility.svg"
         },
     ],
     en: [
         {
             id: 1,
-            title: "Privacy",
-            description: "We adhere to the highest standards of integrity and transparency in all our dealings.",
+            title: "Authentic Hospitality",
+            description: "We deliver refined Saudi hospitality that reflects tradition and generosity, leaving a lasting impression on every guest.",
             icon: "assets/icons/integrity.svg"
         },
         {
             id: 2,
-            title: "Team Spirit",
-            description: "We believe in the power of teamwork and collaboration to achieve common goals.",
-            icon: "assets/icons/collaboration.svg"
-        },
-        {
-            id: 3,
-            title: "Professionalism",
-            description: "We always strive for excellence in all products and services we provide.",
+            title: "Precision & Excellence",
+            description: "We pay attention to the finest details in every event — from planning to execution — ensuring a seamless and flawless experience.",
             icon: "assets/icons/excellence.svg"
         },
         {
+            id: 3,
+            title: "Creativity & Distinction",
+            description: "We consistently bring innovative ideas and unique atmospheres that make every occasion truly one of a kind.",
+            icon: "assets/icons/collaboration.svg"
+        },
+        {
             id: 4,
-            title: "Respect & Responsibility",
-            description: "We take responsibility towards our clients, community, and environment.",
+            title: "Reliability & Integrity",
+            description: "We honor our commitments and timelines, maintaining our clients' trust through transparency and professionalism at every stage.",
             icon: "assets/icons/responsibility.svg"
         },
         {
             id: 5,
-            title: "Effective Communication",
-            description: "We communicate effectively with our clients and partners to achieve satisfaction.",
+            title: "Teamwork",
+            description: "We believe success is the fruit of genuine collaboration between our team members and partners to achieve the best results.",
             icon: "assets/icons/flexibility.svg"
         }
     ]
