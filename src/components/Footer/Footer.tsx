@@ -8,8 +8,6 @@ const footerData = {
     description: 'نسعى لأن نكون الخيار الأول في استثمار طاقات الشباب وأوقاتهم، وتنمية مهاراتهم الرقمية والفنية والمهنية، بما يسهم في بناء جيل متمكن ومؤثر.',
     quickLinks: 'روابط سريعة',
     contact: 'تواصل معنا',
-    newsletterPlaceholder: 'أدخل بريدك الإلكتروني',
-    subscribe: 'اشترك',
     links: [
       { label: 'الرئيسية', href: '#hero' },
       { label: 'رؤيتنا ورسالتنا', href: '#vision-mission' },
@@ -25,9 +23,6 @@ const footerData = {
     description: 'We strive to be the first choice in investing in youth energies and time, and developing their digital, artistic, and professional skills, contributing to building an empowered and influential generation.',
     quickLinks: 'Quick Links',
     contact: 'Contact Us',
-    newsletter: 'Newsletter',
-    newsletterPlaceholder: 'Enter your email',
-    subscribe: 'Subscribe',
     links: [
       { label: 'Home', href: '#hero' },
       { label: 'Vision & Mission', href: '#vision-mission' },
@@ -107,17 +102,6 @@ export default function Footer() {
                 {data.email}
               </li>
             </ul>
-          </div>
-
-          <div className={styles.newsletterCol}>
-            <div className={styles.newsletterForm}>
-              <input
-                type="email"
-                placeholder={data.newsletterPlaceholder}
-                className={styles.emailInput}
-              />
-              <button className={styles.subscribeBtn}>{data.subscribe}</button>
-            </div>
           </div>
         </div>
 
