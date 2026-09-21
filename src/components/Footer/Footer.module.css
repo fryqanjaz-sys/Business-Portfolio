@@ -6,7 +6,7 @@
 
 .top {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+  grid-template-columns: 1.5fr 1fr 1fr;
   gap: 48px;
   padding-bottom: 48px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -92,53 +92,6 @@
   flex-shrink: 0;
 }
 
-.newsletterDesc {
-  font-size: var(--fs-small);
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.7;
-  margin-bottom: 16px;
-}
-
-.newsletterForm {
-  display: flex;
-  gap: 8px;
-}
-
-.emailInput {
-  flex: 1;
-  padding: 12px 16px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  color: var(--text-light);
-  font-size: var(--fs-small);
-  transition: border-color 0.3s ease;
-}
-
-.emailInput::placeholder {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.emailInput:focus {
-  border-color: var(--color-primary);
-}
-
-.subscribeBtn {
-  padding: 12px 24px;
-  background: var(--bg-gradient-primary);
-  color: var(--color-white);
-  border-radius: 10px;
-  font-size: var(--fs-small);
-  font-weight: var(--fw-semibold);
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
-
-.subscribeBtn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(65, 184, 208, 0.4);
-}
-
 .bottom {
   padding: 24px 0;
   text-align: center;
@@ -164,13 +117,5 @@
   .top {
     grid-template-columns: 1fr;
     gap: 32px;
-  }
-
-  .newsletterForm {
-    flex-direction: column;
-  }
-
-  .subscribeBtn {
-    width: 100%;
   }
 }
