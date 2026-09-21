@@ -2,64 +2,64 @@ const goalsData = {
     ar: [
         {
             id: 1,
-            title: 'تنمية المهارات الحياتية',
-            description: 'بناء وتطوير المهارات الحياتية لدى الشباب',
+            title: 'تقديم ضيافة أصيلة',
+            description: 'تقديم تجربة ضيافة سعودية راقية تعكس كرم المناسبة وتحسن استقبال الضيوف.',
             icon: "assets/icons/innovation.svg"
         },
         {
             id: 2,
-            title: 'تعزيز الانتماء الأسري',
-            description: 'تحقيق اعتزاز الشباب بأسرته',
+            title: 'توثيق اللحظات المميزة',
+            description: 'حفظ تفاصيل الفعاليات وذكرياتها من خلال تصوير احترافي يوثق التجربة بوضوح.',
             icon: "assets/icons/customer.svg"
         },
         {
             id: 3,
-            title: 'تمكين الشباب مهنيًا',
-            description: 'تأهيل الشباب لسوق العمل',
+            title: 'تنظيم الفعاليات باحترافية',
+            description: 'تحويل الأفكار إلى خطط واضحة وفعاليات منظمة تراعي احتياجات المناسبة وضيوفها.',
             icon: "assets/icons/growth.svg"
         },
         {
             id: 4,
-            title: 'دعم المشاريع الشبابية',
-            description: 'احتضان مشاريع الشباب ودعمهم',
+            title: 'تنسيق تجربة متكاملة',
+            description: 'الربط بين الديكور والإضاءة والصوت والمؤثرات لصناعة أجواء متناسقة ومميزة.',
             icon: "assets/icons/quality.svg"
         },
         {
             id: 5,
-            title: 'تطوير القدرات القيادية',
-            description: 'تمكين الشباب بالمهارات القيادية',
+            title: 'إدارة سلسة يوم الفعالية',
+            description: 'الإشراف الميداني على التفاصيل والموردين والجدول الزمني لضمان سير المناسبة بإتقان.',
             icon: "assets/icons/partnership.svg"
         },
     ],
     en: [
         {
             id: 1,
-            title: "Developing Life Skills",
-            description: "Building and developing life skills among youth",
+            title: "Authentic Hospitality",
+            description: "Delivering refined Saudi hospitality that reflects the occasion and welcomes every guest with care.",
             icon: "assets/icons/innovation.svg"
         },
         {
             id: 2,
-            title: "Strengthening Family Belonging",
-            description: "Achieving youth pride in their families",
+            title: "Capturing Meaningful Moments",
+            description: "Preserving event details and memories through professional documentation that tells the full story.",
             icon: "assets/icons/customer.svg"
         },
         {
             id: 3,
-            title: "Empowering Youth Professionally",
-            description: "Qualifying youth for the job market",
+            title: "Professional Event Organization",
+            description: "Turning ideas into clear plans and well-organized events shaped around each occasion and its guests.",
             icon: "assets/icons/growth.svg"
         },
         {
             id: 4,
-            title: "Supporting Youth Projects",
-            description: "Incubating and supporting youth projects",
+            title: "A Complete Event Experience",
+            description: "Bringing decor, lighting, sound, and effects together to create a cohesive and memorable atmosphere.",
             icon: "assets/icons/quality.svg"
         },
         {
             id: 5,
-            title: "Developing Leadership Capabilities",
-            description: "Empowering youth with leadership skills",
+            title: "Seamless Event-day Management",
+            description: "Supervising on-site details, suppliers, and schedules to keep every part of the occasion running smoothly.",
             icon: "assets/icons/partnership.svg"
         }
     ]

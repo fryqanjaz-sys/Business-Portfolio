@@ -1,12 +1,12 @@
 const visionData = {
     ar: {
         title: "رؤيتنا",
-        description: 'شباب يمتلكون مهارات الحياة الأساسية، وقيادات شبابية قادرة على صناعة الأثر، ضمن بيئة عمل إبداعية وجاذبة، تُمكّنهم من الإسهام الفاعل في خدمة مجتمعهم.',
+        description: 'بناء سمعة مهنية موثوقة في مجال الضيافة وتنظيم الفعاليات، من خلال تقديم خدمة أصيلة ومتقنة تُرضي عملاءنا وتجعلهم يعودون إلينا.',
         icon: "assets/icons/vision.svg"
     },
     en: {
         title: "Our Vision",
-        description: "Youth who possess essential life skills, and youth leaders capable of creating impact, within a creative and attractive work environment that enables them to contribute effectively to serving their community.",
+        description: "To build a trusted professional reputation in hospitality and event management by delivering genuine, well-executed service that keeps our clients coming back.",
         icon: "assets/icons/vision.svg"
     }
 };

@@ -7,6 +7,11 @@ const images = {
     reception2: img('2.jpeg'),
     pilgrims1: img('Nigerian-Pilgrims1.jpeg'),
     pilgrims2: img('Nigerian-Pilgrims2.jpeg.jpeg'),
+    hospitality1: img('injaz-hospitality/DSC03605.jpg'),
+    hospitality2: img('injaz-hospitality/DSC03689.jpg'),
+    hospitality3: img('injaz-hospitality/DSC03445.jpg'),
+    hospitality4: img('injaz-hospitality/DSC03444.jpg'),
+    hospitality5: img('injaz-hospitality/DSC03590.jpg'),
 };
 
 const portfolioData = {
@@ -21,15 +26,28 @@ const portfolioData = {
                 images.reception2,
             ],
         },
+        // {
+        //     id: 2,
+        //     title: 'مشروع إدارة وتفويج أمتعة الحجاج النيجيريين – موسم حج 1447هـ',
+        //     description: 'نفّذ فريق إنجاز مشروعًا متكاملًا لإدارة وتفتيش ووزن أمتعة الحجاج النيجيريين بالتعاون مع مجموعة شركاء الخير، ومكتب شؤون حجاج نيجيريا، والجهات الأمنية بمطار الملك عبدالعزيز الدولي. شمل المشروع فحص الأمتعة في مقار السكن بمكة، والتنسيق اللوجستي لنقلها، وإعادة تدقيقها في المطار، والإشراف على إنهاء إجراءات المغادرة، مما أسهم في تسريع إجراءات السفر، ورفع كفاءة العمليات، وتحقيق أعلى معايير الأمن والسلامة مع مستوى رضا مرتفع من جميع الجهات المشاركة.',
+        //     category: 'الخدمات اللوجستية',
+        //     images: [
+        //         images.pilgrims1,
+        //         images.pilgrims2,
+        //     ]
+        // },
         {
-            id: 2,
-            title: 'مشروع إدارة وتفويج أمتعة الحجاج النيجيريين – موسم حج 1447هـ',
-            description: 'نفّذ فريق إنجاز مشروعًا متكاملًا لإدارة وتفتيش ووزن أمتعة الحجاج النيجيريين بالتعاون مع مجموعة شركاء الخير، ومكتب شؤون حجاج نيجيريا، والجهات الأمنية بمطار الملك عبدالعزيز الدولي. شمل المشروع فحص الأمتعة في مقار السكن بمكة، والتنسيق اللوجستي لنقلها، وإعادة تدقيقها في المطار، والإشراف على إنهاء إجراءات المغادرة، مما أسهم في تسريع إجراءات السفر، ورفع كفاءة العمليات، وتحقيق أعلى معايير الأمن والسلامة مع مستوى رضا مرتفع من جميع الجهات المشاركة.',
-            category: 'الخدمات اللوجستية',
+            id: 3,
+            title: 'تغطية فعالية الضيافة والتوثيق',
+            description: 'تغطية متكاملة لفعالية تضمنت استقبال الضيوف، تقديم الضيافة العربية، إدارة الفقرات، وتوثيق تفاصيل المناسبة بصور احترافية.',
+            category: 'الضيافة والتوثيق',
             images: [
-                images.pilgrims1,
-                images.pilgrims2,
-            ]
+                images.hospitality1,
+                images.hospitality2,
+                images.hospitality3,
+                images.hospitality4,
+                images.hospitality5,
+            ],
         },
     ],
     en: [
@@ -51,6 +69,19 @@ const portfolioData = {
             images: [
                 images.pilgrims1,
                 images.pilgrims2,
+            ],
+        },
+        {
+            id: 3,
+            title: "Hospitality & Documentation Event Coverage",
+            description: "Complete event coverage including guest reception, Arabic hospitality, program coordination, and professional documentation of the occasion.",
+            category: "Hospitality & Documentation",
+            images: [
+                images.hospitality1,
+                images.hospitality2,
+                images.hospitality3,
+                images.hospitality4,
+                images.hospitality5,
             ],
         }
     ]

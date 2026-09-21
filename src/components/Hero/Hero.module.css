@@ -263,6 +263,28 @@
   font-size: 18px;
 }
 
+.chipIcon svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+.chip:nth-child(3) .chipIcon {
+  color: var(--color-primary);
+}
+
+.chip:nth-child(4) .chipIcon {
+  color: var(--color-secondary-dark);
+}
+
+.chip:nth-child(5) .chipIcon {
+  color: var(--color-tertiary);
+}
+
+.chip:nth-child(6) .chipIcon {
+  color: var(--color-primary-dark);
+}
+
 /* ---------- Scroll Button ---------- */
 .scrollBtn {
   position: absolute;
