@@ -61,16 +61,7 @@ const portfolioData = {
                 images.reception2,
             ],
         },
-        {
-            id: 2,
-            title: "Nigerian Pilgrims' Baggage Management and Coordination Project – Hajj Season 1447 AH",
-            description: "Team Injaz executed a comprehensive project for managing, inspecting, and weighing Nigerian pilgrims' baggage in cooperation with the Good Partners Group, the Office of Nigerian Hajj Affairs, and the security authorities at King Abdulaziz International Airport. The project included baggage inspection at accommodations in Makkah, logistics coordination for transport, re-verification at the airport, and supervision of departure procedures, which contributed to accelerating travel procedures, raising operational efficiency, and achieving the highest security and safety standards with a high satisfaction level from all participating parties.",
-            category: "Logistics Services",
-            images: [
-                images.pilgrims1,
-                images.pilgrims2,
-            ],
-        },
+
         {
             id: 3,
             title: "Hospitality & Documentation Event Coverage",
